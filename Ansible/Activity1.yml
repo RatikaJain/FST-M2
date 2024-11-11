@@ -1,0 +1,8 @@
+- hosts: all
+  become: yes # Become admin?sudo
+  tasks:
+    - name: Create a User
+      user:
+        name: testuser
+        groups: wheel
+        append: true
